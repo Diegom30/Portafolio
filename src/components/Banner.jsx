@@ -1,11 +1,20 @@
 import React, { Suspense, useEffect, useState } from "react";
 import NavBar from "./NavBar";
-import Line from '../assets/img/line.png'
-import Avatar from '../assets/img/Avatar.png'
-import CV from '../assets/img/CV-frontend.pdf'
-import { Buttonn, Containerr, Desc, Img, Left, Right, Section,  WhatWeDo } from "./Styled";
+import Line from "../assets/img/line.png";
+import Avatar from "../assets/img/Avatar.png";
+
+import {
+  Buttonn,
+  Containerr,
+  Desc,
+  Img,
+  Left,
+  Right,
+  Section,
+  WhatWeDo,
+} from "./Styled";
 import { Canvas } from "@react-three/fiber";
-import {  MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { DirectionalLight } from "three";
 
 function Banner() {
@@ -57,36 +66,38 @@ function Banner() {
 
   return (
     <Section>
-         <NavBar />
+      <NavBar />
       <Containerr>
-       
         <Left>
           <h1 className=" text-7xl">Hi! {text}</h1>
-          
 
           <WhatWeDo>
             <img src={Line} alt="" className="h-2 " />
             <h2 className=" text-[#da4ea2]">Welcomw to my Portfolio</h2>
-
           </WhatWeDo>
-          <Desc>I take pleasure in crafting enchanting digital experiences that captivate and delight users at every touchpoint. Let me bring your most innovative ideas to life!</Desc>
-          <Buttonn><a href={CV} target="_black">CV</a></Buttonn>
+          <Desc>
+            I take pleasure in crafting enchanting digital experiences that
+            captivate and delight users at every touchpoint. Let me bring your
+            most innovative ideas to life!
+          </Desc>
         </Left>
         <Right>
-            <Canvas>
-                <Suspense fallback={null}/>
-                <OrbitControls enableZoom={false}/>
-                <ambientLight intensity={1}/>
-                <directionalLight position={[3, 2, 1]}/>
-                <Sphere args={[1, 100, 200]} scale={2.4}>
-                    <MeshDistortMaterial
-                    color='#3d1c56'
-                    attach='material'
-                    distort={0.5}
-                    speed={2}/>
-
-                </Sphere>
-            </Canvas>
+          <Canvas>
+            <Suspense fallback={null} />
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[ 1, 100, 200]} scale={2.5} >
+              <MeshDistortMaterial
+              
+                color="#3d1c56"
+                attach="material"
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
+         
           <Img src={Avatar} alt="" />
         </Right>
       </Containerr>
