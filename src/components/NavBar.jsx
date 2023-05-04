@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Link, NavBarr } from "./Styled";
+import { Button, Link, NavBarr} from "./Styled";
 import Logo from "../assets/img/logo.jpeg";
 import github from '../assets/img/github.svg'
 import linkedin from '../assets/img/linkedin.svg'
@@ -12,15 +12,16 @@ function NavBar() {
         <img src={Logo} alt="Logo" className="h-12 bg-slate-500 rounded-full" />
         <ul className="flex gap-5 list-none ">
           <li>
-            <a href="#">Home</a></li>
+            <Link href="#">Home</Link>
+            </li>
           <li>
-            <a href="#">Skills</a>
+            <Link href="#">Skills</Link>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <Link href="#">Projects</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link href="#">Contact</Link>
           </li>
         </ul>
       </div>
