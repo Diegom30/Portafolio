@@ -4,7 +4,7 @@ import Vector1 from "../assets/img/Vector1.png";
 import Vector2 from "../assets/img/Vector2.png";
 import Avatar2 from '../assets/img/Avatar2.png'
 import Download from '../assets/img/download.svg'
-import CV from "../assets/img/CV-Frontend.pdf";
+import CV from "../assets/img/CV-frontend.pdf";
 import Skills from "./Skills";
 
 function AbountMe() {
