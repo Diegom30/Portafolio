@@ -17,6 +17,7 @@ import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { DirectionalLight } from "three";
 
+
 function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDelting, SetIsDeleting] = useState(false);
@@ -82,23 +83,22 @@ function Banner() {
           </Desc>
         </Left>
         <Right>
-          <Canvas>
-            <Suspense fallback={null} />
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[ 1, 100, 200]} scale={2.5} >
+        <Canvas>
+          <Suspense fallback={null}>
+            <OrbitControls enableZoom={false}/>
+            <ambientLight intensity={1}/>
+            <directionalLight position={[3, 2, 1]}/>
+            <Sphere args={[1, 100, 200]} scale={2.5}>
               <MeshDistortMaterial
-              
-                color="#3d1c56"
-                attach="material"
-                distort={0.5}
-                speed={2}
-              />
+              color="#3d1c56"
+              attach="material"
+              distort={0.5}
+              speed={2}/>
             </Sphere>
-          </Canvas>
-         
-          <Img src={Avatar} alt="" />
+          </Suspense>
+
+        </Canvas>
+          <Img src={Avatar} />
         </Right>
       </Containerr>
     </Section>
