@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Banner } from "./Styled";
+import { Banner, Section } from "./Styled";
 
 import Meter from "../assets/img/meter3.svg";
 import Meter2 from "../assets/img/meter2.svg";
@@ -28,10 +28,11 @@ function Skills() {
   };
 
   return (
-    <Banner className=" rounded-[64px] text-center p-[30px] ">
-      <div className="flex justify-center">
+    <Section>
+    <Banner className="container rounded-[64px] text-center p-[30px] ">
+    <div className="flex flex-col items-center justify-center">
         <div className="w-full max-w-screen-lg">
-          
+        <div className="skill-bx animate__animated animate__zoomIn">
             <h2 className="text-3xl font-bold">Skills</h2>
             <p className="text-gray-300 text-lg tracking-wider leading-relaxed my-3 ">
             This section highlights my career skills, including programming languages and software, as well as soft skills like communication and problem solving. With my experience and skill set, I can be a valuable asset to any team or project.
@@ -76,9 +77,11 @@ function Skills() {
              
             </Carousel>
           </div>
+          </div>
         </div>
       
     </Banner>
+    </Section>
   );
 }
 

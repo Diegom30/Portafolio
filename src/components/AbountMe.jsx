@@ -11,10 +11,10 @@ function AbountMe() {
   return (
     <Section>
      
-      <Containerr className=" flex-col">
+      <Containerr className="container flex-col">
         
 
-      <Up className="pb-0 mb-0">
+      <Up className="pb-0 mb-0 ">
        
 
         <div className="relative">

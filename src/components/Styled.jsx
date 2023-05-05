@@ -18,7 +18,8 @@ export const Container = styled.div`
   }
 `;
 export const NavBarr = styled.div`
-  width: 1400px;
+  width: 100%;
+
 
   display: flex;
   flex-direction: row;
@@ -27,6 +28,12 @@ export const NavBarr = styled.div`
   padding: 20px 0;
   font-family: "Lexend", sans-serif;
   font-size: 18px;
+  
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+    justify-content: center;
+    
+  }
 `;
 
 export const Button = styled.button`
@@ -55,15 +62,24 @@ flex-direction: column;
 align-items: center;
 justify-content: space-between;
 scroll-snap-align: center;
+@media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
+    
+
 `;
 
 export const Containerr = styled.div`
   height: 100%;
-  width: 1400px;
+  width: 100%;
   display: flex;
   align-items: center;
-
+padding-left: 6rem;
+    padding-right: 6rem;
   justify-content: space-between;
+  
+
+  
 `;
 export const Left = styled.div`
   flex: 2;
@@ -71,7 +87,22 @@ export const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 5px;
+  @media only screen and (max-width: 900px) {
+    flex: 1;
+    align-items: center;
+    
+  }
+  
 `;
+export const TitleBanner = styled.h1`
+  font-size: 4.5rem;
+    line-height: 1;
+
+    @media only screen and (max-width: 600px) {
+      
+      justify-content: center;
+  }
+`
 
 export const WhatWeDo = styled.div`
   display: flex;
@@ -83,6 +114,11 @@ export const WhatWeDo = styled.div`
 export const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
+  @media only screen and (max-width: 800px) {
+      
+      display: none;
+    }
+
 `;
 
 export const Right = styled.div`
@@ -90,6 +126,11 @@ export const Right = styled.div`
   height: 600px;
 
   position: relative;
+  @media only screen and (max-width: 900px) {
+    flex: 0;
+    visibility: hidden;
+    
+  }
 `;
 
 export const Img = styled.img`
@@ -133,6 +174,9 @@ export const Abount = styled(Desc)`
   line-height: 147.5%;
 
   line-height: 2rem;
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+  }
 `;
 
 export const Buttonn = styled(Button)`
@@ -154,6 +198,10 @@ export const Vector = styled.img`
   top: 0;
   left: 0;
   z-index: 2;
+
+   @media only screen and (max-width: 850px) {
+    display: none;
+  }
 `;
 
 export const Contain = styled.div`
@@ -172,7 +220,7 @@ export const Banner = styled.div`
   background: rgba(66, 74, 92, 0.25);
   background-blend-mode: overlay, normal;
   backdrop-filter: blur(15px);
-
+position: relative;
   height: 450px;
   width: 1250px;
   box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1),
@@ -189,6 +237,9 @@ grid-template-columns: repeat(6, 16.67%);
   gap: 5px;
 
 scroll-snap-align: center;
+@media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
 `
 
 // Card, En este orden //
@@ -248,6 +299,9 @@ margin: 25px;
 margin-left: 100px;
 grid-column: 3 / 5;
 grid-row: 1 / 2;
+  @media only screen and (max-width: 1400px) {
+    display: none;
+  }
   
 `
 export const Card3 = styled(Card2)`

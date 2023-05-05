@@ -8,9 +8,9 @@ import telegram from '../assets/img/telegram.svg'
 function NavBar() {
   return (
     <NavBarr>
-      <div className="flex items-center gap-12">
+      <div className="flex items-center gap-12 px-24">
         <img src={Logo} alt="Logo" className="h-12 bg-slate-500 rounded-full" />
-        <ul className="flex gap-5 list-none ">
+        <ul className="flex gap-5 list-none max-[768px]:hidden max-h-screen">
           <li>
             <Link href="#">Home</Link>
             </li>
@@ -25,7 +25,7 @@ function NavBar() {
           </li>
         </ul>
       </div>
-      <div className="flex center gap-4">
+      <div className="flex center gap-4 px-24">
 
         <Link href="https://github.com/Diegom30" target="_black">
         <img src={github} alt="Github-logo" className=" border-2 rounded-md" />

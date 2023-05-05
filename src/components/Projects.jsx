@@ -28,7 +28,7 @@ import CommingSoon from '../assets/img/404.jpg'
 
 function Projects() {
   return (
-    <ContainerGrid>
+    <ContainerGrid className="container ">
         <DescProjets>Explore my latest creations and see the magic unfold. From web apps to design projects, this section showcases my passion for innovation and problem-solving. Take a look and let's bring your ideas to life</DescProjets>
         
         <Title className="text-center">Projects</Title>

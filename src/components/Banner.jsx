@@ -11,6 +11,7 @@ import {
   Left,
   Right,
   Section,
+  TitleBanner,
   WhatWeDo,
 } from "./Styled";
 import { Canvas } from "@react-three/fiber";
@@ -70,12 +71,12 @@ function Banner() {
       <NavBar />
       <Containerr>
         <Left>
-          <h1 className=" text-7xl">Hi! {text}</h1>
+          <TitleBanner className=" text-7xl max-[600px]: visibility:hidden ">Hi! {text}</TitleBanner>
 
           <WhatWeDo>
             <img src={Line} alt="" className="h-2 " />
-            <h2 className=" text-[#da4ea2]">Welcomw to my Portfolio</h2>
-          </WhatWeDo>
+            <h2 className=" text-[#da4ea2]">Welcome to my Portfolio</h2>
+          </WhatWeDo >
           <Desc>
             I take pleasure in crafting enchanting digital experiences that
             captivate and delight users at every touchpoint. Let me bring your
